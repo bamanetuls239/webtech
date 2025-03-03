@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanaya Bamane - Portfolio</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #096b90;
+}
+
+button {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFDD00;
+}
+
+header {
+    background: #042B44;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    color: #FF5733;
+    transform: scale(1.1);
+}
+
+header p {
+    font-size: 1.2rem;
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
+}
+
+header p:hover {
+    letter-spacing: 2px;
+    color: #FFDD00;
+}
+
+nav {
+    background: #096b90;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #FF5733;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #FFDD00;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.container img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.container img:hover {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 0 15px #042B44;
+    filter: brightness(1.2);
+}
+
+.skills-list {
+    list-style: square inside;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #096b90;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    color: #FF5733;
+    transform: translateX(10px);
+}
+
+.skills-list li:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Footer Styles */
+footer {
+    background: #096b90;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer:hover {
+    background: #042B44;
+    transform: scale(1.01);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFDD00;
+    text-decoration: underline;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="userName">Tanaya Bamane</h1>
+            <img id="profilePicture" src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?semt=ais_hybrid" alt="photo">
+            <p id="userProfession">Student of DYPSEM</p>
+            <button onclick="updateBio()">Update Bio</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p id="bioText">Hi, I’m Tanaya Masanu Bamane, I am currently a student at DYPSEM College, with a strong foundation in programming languages such as C, Python, and Data Structures. I have a solid understanding of web development technologies, including HTML and CSS. As a C programming expert, I have successfully completed the online NPTEL C course, for which I received a certification. Presently, I am enhancing my skills by learning Java and exploring its diverse applications.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>C language</li>
+                <li>HTML and CSS</li>
+                <li>Python</li>
+                <li>Data Structures</li>
+                <li>Java</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: bamanetuls239@gmail.com</p>
+            <p>Phone: 7620898187</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tanaya Bamane. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function updateBio() {
+        let userName = prompt("Enter your name:");
+        let userProfession = prompt("Enter your profession:");
+        let userBio = prompt("Tell us about yourself:");
+        let userImageUrl = prompt("Enter the URL of your profile picture:");
+
+        if (!userName || !userProfession || !userBio || !userImageUrl) {
+            alert("Please fill in all the fields.");
+            return;
+        }
+
+        alert(`Name: ${userName}\nProfession: ${userProfession}\nBio: ${userBio}`);
+        console.log(`Name: ${userName}`);
+        console.log(`Profession: ${userProfession}`);
+        console.log(`Bio: ${userBio}`);
+
+        document.getElementById("userName").textContent = userName;
+        document.getElementById("userProfession").textContent = userProfession;
+        document.getElementById("bioText").textContent = userBio;
+        document.getElementById("profilePicture").src = userImageUrl;
+    }
+</script>
+
+</body>
+</html>
